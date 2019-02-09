@@ -1,8 +1,0 @@
-# RESTful web services
-
-| Directory                                                                    | Lesson                                                                                                                                                                                          |
-|------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [01-spring-boot-new-project](01-spring-boot-new-project)                     | [Section 03 - Step 01: Initializing a RESTful Services Project with Spring Boot](https://www.udemy.com/microservices-with-spring-boot-and-spring-cloud/learn/v4/t/lecture/8005606)              |
-| [02-hello-world-rest-controller](02-hello-world-rest-controller)             | [Section 03 - Step 03: Creating a Hello World Service](https://www.udemy.com/microservices-with-spring-boot-and-spring-cloud/learn/v4/t/lecture/8005612)                                        |
-| [03-hello-world-bean-rest-controller](03-hello-world-bean-rest-controller)   | [Section 03 - Step 04: Enhancing the Hello World Service to return a Bean](https://www.udemy.com/microservices-with-spring-boot-and-spring-cloud/learn/v4/t/lecture/8005614)                    |
-| [04-hello-world-logging-response-body](04-hello-world-logging-response-body) | [Section 03 - Step 05: Quick Review of Spring Boot Auto Configuration and Dispatcher Servlet](https://www.udemy.com/microservices-with-spring-boot-and-spring-cloud/learn/v4/t/lecture/8005616) |

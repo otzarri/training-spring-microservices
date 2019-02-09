@@ -1,4 +1,4 @@
-# Hello World REST controller
+# REST controller
 
 Created three REST endpoints:
 * /hello-world

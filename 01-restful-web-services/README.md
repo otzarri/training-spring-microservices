@@ -1,0 +1,10 @@
+# RESTful web services
+
+| Directory                                                    | Lesson                                                                                                                                                                                          |
+|--------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [01-spring-boot-new-project](01-spring-boot-new-project)     | [Section 03 - Step 01: Initializing a RESTful Services Project with Spring Boot](https://www.udemy.com/microservices-with-spring-boot-and-spring-cloud/learn/v4/t/lecture/8005606)              |
+| [02-rest-controller](02-rest-controller)                     | [Section 03 - Step 03: Creating a Hello World Service](https://www.udemy.com/microservices-with-spring-boot-and-spring-cloud/learn/v4/t/lecture/8005612)                                        |
+| [03-rest-controller-with-bean](03-rest-controller-with-bean) | [Section 03 - Step 04: Enhancing the Hello World Service to return a Bean](https://www.udemy.com/microservices-with-spring-boot-and-spring-cloud/learn/v4/t/lecture/8005614)                    |
+| [04-logging](04-logging)                                     | [Section 03 - Step 05: Quick Review of Spring Boot Auto Configuration and Dispatcher Servlet](https://www.udemy.com/microservices-with-spring-boot-and-spring-cloud/learn/v4/t/lecture/8005616) |
+| [05-path-variables](05-path-variables)                       | [Section 03 - Step 06: Enhancing the Hello World Service with a Path Variable](https://www.udemy.com/microservices-with-spring-boot-and-spring-cloud/learn/v4/t/lecture/8005618)                |
+| [06-in-memory-user-database](06-in-memory-user-database)     | [Section 03 - Step 07 - Creating User Bean and User Service](https://www.udemy.com/microservices-with-spring-boot-and-spring-cloud/learn/v4/t/lecture/8005620)                                  |
