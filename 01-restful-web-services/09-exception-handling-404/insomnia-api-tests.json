@@ -1,0 +1,116 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2019-02-09T13:36:21.148Z",
+	"__export_source": "insomnia.desktop.app:v6.3.2",
+	"resources": [
+		{
+			"_id": "wrk_0860bf82f2674166857203c0221a21ca",
+			"created": 1549717896600,
+			"description": "",
+			"modified": 1549718437216,
+			"name": "Spring boot ws",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_c819977ebad94486815e9072faa9e385",
+			"color": null,
+			"created": 1549717896606,
+			"data": {},
+			"isPrivate": false,
+			"metaSortKey": 1549717896606,
+			"modified": 1549717896606,
+			"name": "New Environment",
+			"parentId": "wrk_0860bf82f2674166857203c0221a21ca",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_bc8dbb22630f425cbb06ed5e075e04be",
+			"cookies": [],
+			"created": 1549717896607,
+			"modified": 1549717896607,
+			"name": "Default Jar",
+			"parentId": "wrk_0860bf82f2674166857203c0221a21ca",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "req_e38c066ac2b34d7e9ecbaf3630b85d90",
+			"authentication": {},
+			"body": {},
+			"created": 1549717922050,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1549717922050,
+			"method": "GET",
+			"modified": 1549717931423,
+			"name": "/users",
+			"parameters": [],
+			"parentId": "wrk_0860bf82f2674166857203c0221a21ca",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/users",
+			"_type": "request"
+		},
+		{
+			"_id": "req_01d39878d2db431d98db73874e220ba4",
+			"authentication": {},
+			"body": {},
+			"created": 1549717935239,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1549717922000,
+			"method": "GET",
+			"modified": 1549717944814,
+			"name": "/users/1",
+			"parameters": [],
+			"parentId": "wrk_0860bf82f2674166857203c0221a21ca",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/users/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_e80b639362b6429289f2547f4279d60a",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n  \"name\": \"Joseba\",\n  \"birthDate\": \"2000-01-01T13:00:34.777+0000\"\n}"
+			},
+			"created": 1549717957235,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_53a2226454a24b7d9cf5d876072ac6a6",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549717921950,
+			"method": "POST",
+			"modified": 1549718033697,
+			"name": "/users",
+			"parameters": [],
+			"parentId": "wrk_0860bf82f2674166857203c0221a21ca",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/users",
+			"_type": "request"
+		}
+	]
+}
