@@ -1,0 +1,98 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2019-02-17T00:10:21.589Z",
+	"__export_source": "insomnia.desktop.app:v6.3.2",
+	"resources": [
+		{
+			"_id": "wrk_0860bf82f2674166857203c0221a21ca",
+			"created": 1549717896600,
+			"description": "",
+			"modified": 1549718437216,
+			"name": "Spring boot ws",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_c819977ebad94486815e9072faa9e385",
+			"color": null,
+			"created": 1549717896606,
+			"data": {},
+			"isPrivate": false,
+			"metaSortKey": 1549717896606,
+			"modified": 1549717896606,
+			"name": "New Environment",
+			"parentId": "wrk_0860bf82f2674166857203c0221a21ca",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_bc8dbb22630f425cbb06ed5e075e04be",
+			"cookies": [],
+			"created": 1549717896607,
+			"modified": 1549717896607,
+			"name": "Default Jar",
+			"parentId": "wrk_0860bf82f2674166857203c0221a21ca",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "req_e38c066ac2b34d7e9ecbaf3630b85d90",
+			"authentication": {},
+			"body": {},
+			"created": 1549717922050,
+			"description": "",
+			"headers": [
+				{
+					"disabled": false,
+					"id": "pair_2cca99a7b1f54bbfbac20fe7b562ab74",
+					"name": "Accept",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549717922050,
+			"method": "GET",
+			"modified": 1550362177030,
+			"name": "/static-filtering-one",
+			"parameters": [],
+			"parentId": "wrk_0860bf82f2674166857203c0221a21ca",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/static-filtering-one",
+			"_type": "request"
+		},
+		{
+			"_id": "req_b0b9d9e5940649978664220d9440ab5c",
+			"authentication": {},
+			"body": {},
+			"created": 1550362162370,
+			"description": "",
+			"headers": [
+				{
+					"disabled": false,
+					"id": "pair_2cca99a7b1f54bbfbac20fe7b562ab74",
+					"name": "Accept",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549717922043.75,
+			"method": "GET",
+			"modified": 1550362183481,
+			"name": "/static-filtering-two",
+			"parameters": [],
+			"parentId": "wrk_0860bf82f2674166857203c0221a21ca",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/static-filtering-two",
+			"_type": "request"
+		}
+	]
+}
