@@ -1,7 +1,7 @@
 {
 	"_type": "export",
 	"__export_format": 3,
-	"__export_date": "2019-02-18T03:16:36.511Z",
+	"__export_date": "2019-02-18T04:22:44.593Z",
 	"__export_source": "insomnia.desktop.app:v6.3.2",
 	"resources": [
 		{
@@ -150,6 +150,73 @@
 			"metaSortKey": -1550403260587.5,
 			"method": "GET",
 			"modified": 1550459656794,
+			"name": "/jpa/users/10001/posts",
+			"parameters": [],
+			"parentId": "fld_003bffd59a364230b5752d2d620fd9c9",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/jpa/users/10001/posts",
+			"_type": "request"
+		},
+		{
+			"_id": "req_b7efbd949d014903a230a890a7422316",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n  \"description\": \"My third post\"\n}"
+			},
+			"created": 1550461949307,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_dea1c577ff624c1b946dca99db388ed9",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1550403260537.5,
+			"method": "POST",
+			"modified": 1550462019134,
+			"name": "/jpa/users/10001/posts",
+			"parameters": [],
+			"parentId": "fld_003bffd59a364230b5752d2d620fd9c9",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/jpa/users/10001/posts",
+			"_type": "request"
+		},
+		{
+			"_id": "req_3fe6782093644f499f7af69df0127bf6",
+			"authentication": {
+				"disabled": true,
+				"password": "",
+				"type": "basic",
+				"username": ""
+			},
+			"body": {},
+			"created": 1550461978146,
+			"description": "",
+			"headers": [
+				{
+					"disabled": false,
+					"id": "pair_2cca99a7b1f54bbfbac20fe7b562ab74",
+					"name": "Accept",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1550403260487.5,
+			"method": "GET",
+			"modified": 1550461986049,
 			"name": "/jpa/users/10001/posts",
 			"parameters": [],
 			"parentId": "fld_003bffd59a364230b5752d2d620fd9c9",
