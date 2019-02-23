@@ -23,26 +23,46 @@ $ curl -s https://start.spring.io/starter.tgz                 \
 Set application name and port in file [application.properties](src/main/resources/application.properties).
 
 Created class [CurrencyExchangeController](src/main/java/com/in28minutes/microservices/CurrencyExchangeController.java)
-to set endpoint methods and added new endpoint method `retrieveUserPosts()` to create a new REST endpoint for `GET`
-method to return instances of entity class [ExchangeValue](src/main/java/com/in28minutes/microservices/ExchangeValue.java).
+to set endpoint methods and added new endpoint method `retrieveExchangeValue()` to create a new REST endpoint for `GET`
+method to return instances of entity class [ExchangeValue](src/main/java/com/in28minutes/microservices/ExchangeValue.java),
+also creates an instance of class [Environment](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/core/env/Environment.html)
+to retrieve the port where the service is running and attach it to the response.
 
+Created repository class [ExchangeValueRepository.java](src/main/java/com/in28minutes/microservices/ExchangeValueRepository.java)
+with method `findByFromAndTo` to get exchange value from the database and modified the controller class to return the object
+given by this last method.
 
+Added dependencies for JPA using H2 database:
 
----
-Set application name in [application.properties](src/main/resources/application.properties) using `spring.application.name`,
-this is an important parameter because the requests to the Spring Boot Configuration Server will be built using this
-parameter. Default configurations for this service will be exposed at http://localhost:8888/limits-service/default.
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+<dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+</dependency>
+```
 
-Created class [LimitsConfigurationController](src/main/java/com/in28minutes/microservices/LimitsConfigurationController.java)
-to define method `retrieveLimitsFromConfigurations()` that returns an instance of class [LimitConfiguration](src/main/java/com/in28minutes/microservices/bean/LimitConfiguration.java)
-using endpoint `/limits`. 
+Configured class [ExchangeValue](src/main/java/com/in28minutes/microservices/ExchangeValue.java)
+to integrate with JPA using tags `@Entity`, `@Id`, and `@Column`.
 
-Class [LimitsConfigurationController](src/main/java/com/in28minutes/microservices/LimitsConfigurationController.java)
-gathers configuration from [Spring Cloud Configuration Server](../spring-cloud-config-server) at http://localhost:8080,
-which is defined in the `spring.cloud.config.uri`.
+Created file [data.sql](src/main/resources/data.sql) with sample data for H2 database.
+
+Added some database-related settings to [application.properties]():
+
+```ini
+...
+spring.jpa.show-sql=true
+spring.h2.console.enabled=true
+```
 
 To run this project place into to this directory and run:
 
 ```
 $ mvn clean spring-boot:run
 ```
+
+To query the database easily visit http://localhost:8080/h2-console and connect to database `jdbc:h2:mem:testdb` with
+username `sa` and no password.
