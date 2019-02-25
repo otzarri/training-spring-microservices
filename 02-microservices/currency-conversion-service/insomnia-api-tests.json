@@ -1,0 +1,119 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2019-02-24T13:52:54.843Z",
+	"__export_source": "insomnia.desktop.app:v6.3.2",
+	"resources": [
+		{
+			"_id": "wrk_0860bf82f2674166857203c0221a21ca",
+			"created": 1549717896600,
+			"description": "",
+			"modified": 1550926653610,
+			"name": "Spring Cloud ms",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_c819977ebad94486815e9072faa9e385",
+			"color": null,
+			"created": 1549717896606,
+			"data": {},
+			"isPrivate": false,
+			"metaSortKey": 1549717896606,
+			"modified": 1549717896606,
+			"name": "New Environment",
+			"parentId": "wrk_0860bf82f2674166857203c0221a21ca",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_bc8dbb22630f425cbb06ed5e075e04be",
+			"cookies": [
+				{
+					"creation": "2019-02-17T15:40:06.067Z",
+					"domain": "localhost",
+					"hostOnly": true,
+					"httpOnly": true,
+					"id": "5138875469506616",
+					"key": "JSESSIONID",
+					"lastAccessed": "2019-02-17T15:40:06.067Z",
+					"path": "/",
+					"value": "40661AC02B5F391672D72743B5BBCA57"
+				}
+			],
+			"created": 1549717896607,
+			"modified": 1550418006068,
+			"name": "Default Jar",
+			"parentId": "wrk_0860bf82f2674166857203c0221a21ca",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_003bffd59a364230b5752d2d620fd9c9",
+			"created": 1550403260475,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1550403260475,
+			"modified": 1550978493035,
+			"name": "currency-conversion-service",
+			"parentId": "wrk_0860bf82f2674166857203c0221a21ca",
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_bc0c3db108bb47a194967f87c5fe45ae",
+			"authentication": {},
+			"body": {},
+			"created": 1550663004617,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_b56c9a468ca44337a80253074475cad6",
+					"name": "Origin",
+					"value": "google.com"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1550663004617,
+			"method": "GET",
+			"modified": 1551016289275,
+			"name": ":8100/currency-converter/from/USD/to/INR/quantity/1000",
+			"parameters": [],
+			"parentId": "fld_003bffd59a364230b5752d2d620fd9c9",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8100/currency-converter/from/USD/to/INR/quantity/1000",
+			"_type": "request"
+		},
+		{
+			"_id": "req_c02cfd28140c4d59af65e513ed57a29f",
+			"authentication": {},
+			"body": {},
+			"created": 1551015395484,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_b56c9a468ca44337a80253074475cad6",
+					"name": "Origin",
+					"value": "google.com"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1550663004567,
+			"method": "GET",
+			"modified": 1551016329468,
+			"name": ":8000/currency-exchange/from/USD/to/INR",
+			"parameters": [],
+			"parentId": "fld_003bffd59a364230b5752d2d620fd9c9",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8000/currency-exchange/from/USD/to/INR",
+			"_type": "request"
+		}
+	]
+}

@@ -1,4 +1,4 @@
-package com.in28minutes.microservices.bean;
+package com.in28minutes.microservices.limitsservice.bean;
 
 import java.util.StringJoiner;
 

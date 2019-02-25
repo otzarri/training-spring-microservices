@@ -1,4 +1,4 @@
-package com.in28minutes.microservices;
+package com.in28minutes.microservices.currencyexchangeservice;
 
 import java.math.BigDecimal;
 
@@ -17,7 +17,7 @@ public class CurrencyExchangeController {
 	@Autowired
 	private ExchangeValueRepository repository;
 
-    @GetMapping("/currency/exchange/from/{from}/to/{to}")
+    @GetMapping("/currency-exchange/from/{from}/to/{to}")
     public ExchangeValue retrieveExchangeValue(@PathVariable String from, @PathVariable String to) {
         //ExchangeValue exchangeValue = new ExchangeValue(1000L, from, to, BigDecimal.valueOf(65));
         ExchangeValue exchangeValue = repository.findByFromAndTo(from, to);
