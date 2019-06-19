@@ -40,4 +40,11 @@ To run this project place into to this directory and run:
 $ mvn clean spring-boot:run
 ```
 
-Once service started, go to http://localhost:8761 to use Eureka's web UI 
+Once service started, go to http://localhost:8761 to use Eureka's web UI.
+
+
+[Insomnia](https://insomnia.rest/) API test plan is defined in
+test file [insomia-test-plan.json](insomia-test-plan.json).
+
+Note that a different `currency-exchange-service`
+microservice (different port) responds to each request.

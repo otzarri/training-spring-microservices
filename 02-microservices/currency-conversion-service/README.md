@@ -66,6 +66,9 @@ Added configuration property `eureka.client.service-url.default-zone=http://loca
 Commented property `currency-exchange-service.ribbon.listOfServers=http://localhost:8000,http://localhost:8001` in file [application.properties](src/main/resources/application.properties)
 because it's address is now beging managed by Eureka.
 
+Modified class [CurrencyExchangeServiceProxy](src/main/java/com/in28minutes/microservices/currencyconversionservice/CurrencyExchangeServiceProxy.java) to make Feign requests to service `netflix-zuul-api-gateway-server`.
+
+
 There are different REST call kinds implemented in controller class [CurrencyConversionController](src/main/java/com/in28minutes/microservices/CurrencyConversionController.java)
 to connect it to Eureka Name Server.
 
@@ -95,6 +98,11 @@ Or
 $ java -jar target/currency-exchange-service-0.0.1-SNAPSHOT.jar --server.port=8000
 $ java -jar target/currency-exchange-service-0.0.1-SNAPSHOT.jar --server.port=8001
 ```
+
+Service `currency-conversion-service` is now prepared to connect
+to `currency-exchange-service` instances passing through Zuul.
+
+All requests to `currency-exchange-service` endpoint will be logged in the console of `netflix-zuul-api-gateway-server`.
 
 [Insomnia](https://insomnia.rest/) API test plan is defined in
 test file [insomia-test-plan.json](insomia-test-plan.json).
