@@ -1,4 +1,4 @@
-# Creating limits-service
+# Currency Exchange Service
 
 Project generated with [Spring Initializr](https://start.spring.io/)
 
@@ -6,17 +6,17 @@ As this project was developed with Spring Boot `2.0.0.M3` for this course and no
 website, I used this HTTP call to generate the project with the settings I need:
 
 ```
-$ curl -s https://start.spring.io/starter.tgz                 \
-    -d groupId=com.in28minutes.microservices                  \
-    -d artifactId=currency-exchange-service                   \
-    -d packageName=com.in28minutes.microservices              \
-    -d name=CurrencyExchangeService                           \
-    -d 'description=Currency Exchange microservice'           \
-    -d type=maven-project                                     \
-    -d language=java                                          \
-    -d bootVersion=2.0.0.RELEASE                              \
-    -d dependencies=web,devtools,cloud-config-client,actuator \
-    -d baseDir=currency-exchange-service                      \
+$ curl -s https://start.spring.io/starter.tgz                            \
+    -d groupId=com.in28minutes.microservices                             \
+    -d artifactId=currency-exchange-service                              \
+    -d packageName=com.in28minutes.microservices.currencyexchangeservice \
+    -d name=CurrencyExchangeService                                      \
+    -d 'description=Currency Exchange microservice'                      \
+    -d type=maven-project                                                \
+    -d language=java                                                     \
+    -d bootVersion=2.0.0.RELEASE                                         \
+    -d dependencies=web,devtools,cloud-config-client,actuator            \
+    -d baseDir=currency-exchange-service                                 \
     | tar -zxvf -
 ```
 
@@ -50,13 +50,26 @@ to integrate with JPA using tags `@Entity`, `@Id`, and `@Column`.
 
 Created file [data.sql](src/main/resources/data.sql) with sample data for H2 database.
 
-Added some database-related settings to [application.properties]():
+Added some database-related settings to [application.properties](src/main/resources/application.properties):
 
 ```ini
 ...
 spring.jpa.show-sql=true
 spring.h2.console.enabled=true
 ```
+
+Added dependency `spring-cloud-starter-netflix-eureka-client` in `pom.xml`:
+
+```
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+```
+
+Added annotation `@EnableDiscoveryClient` to class [CurrencyExchangeServiceApplication.java](src/main/java/com/in28minutes/microservices/currencyexchangeservice/CurrencyExchangeServiceApplication.java) 
+
+Added configuration property `eureka.client.service-url.default-zone=localhost:8761/eureka` to file [application.properties](src/main/resources/application.properties).
 
 To run this project place into to this directory and run:
 
@@ -66,3 +79,6 @@ $ mvn clean spring-boot:run
 
 To query the database easily visit http://localhost:8080/h2-console and connect to database `jdbc:h2:mem:testdb` with
 username `sa` and no password.
+
+[Insomnia](https://insomnia.rest/) API test plan is defined in
+test file [insomia-test-plan.json](insomia-test-plan.json).

@@ -1,4 +1,4 @@
-# Creating limits-service
+# Spring Cloud Config Server
 
 Project generated with [Spring Initializr](https://start.spring.io/)
 
@@ -6,17 +6,17 @@ As this project was developed with Spring Boot `2.0.0.M3` for this course and no
 website, I used this HTTP call to generate the project with the settings I need:
 
 ```
-$ curl -s https://start.spring.io/starter.tgz                \
-    -d groupId=com.ins28minutes.microservices                \
-    -d artifactId=spring-cloud-config-server                 \
-    -d packageName=com.ins28minutes.microservices            \
-    -d name=SpringCloudConfigServer                          \
-    -d 'description=Spring Cloud Config Server microservice' \
-    -d type=maven-project                                    \
-    -d language=java                                         \
-    -d bootVersion=2.0.0.RELEASE                             \
-    -d dependencies=devtools,cloud-config-server             \
-    -d baseDir=spring-cloud-config-server                    \
+$ curl -s https://start.spring.io/starter.tgz                             \
+    -d groupId=com.ins28minutes.microservices                             \
+    -d artifactId=spring-cloud-config-server                              \
+    -d packageName=com.ins28minutes.microservices.springcloudconfigserver \
+    -d name=SpringCloudConfigServer                                       \
+    -d 'description=Spring Cloud Config Server microservice'              \
+    -d type=maven-project                                                 \
+    -d language=java                                                      \
+    -d bootVersion=2.0.0.RELEASE                                          \
+    -d dependencies=devtools,cloud-config-server                          \
+    -d baseDir=spring-cloud-config-server                                 \
     | tar -zxvf -
 ```
 
@@ -44,3 +44,6 @@ This service exposes different properties files in their own endpoint.
 | [/limits-service/default](http://localhost:8888/limits-service/default) | [limits-service.properties](https://gitlab.com/josebamartos-training/spring-microservices-config/blob/master/limits-service.properties)     |
 | [/limits-service/dev](http://localhost:8888/limits-service/dev)         | [limits-service-dev.properties](https://gitlab.com/josebamartos-training/spring-microservices-config/blob/master/limits-service.properties) |
 | [/limits-service/qa](http://localhost:8888/limits-service/default)      | [limits-service-qa.properties](https://gitlab.com/josebamartos-training/spring-microservices-config/blob/master/limits-service.properties)  |
+
+[Insomnia](https://insomnia.rest/) API test plan is defined in
+test file [insomia-test-plan.json](insomia-test-plan.json).

@@ -1,4 +1,4 @@
-# Creating limits-service
+# Limits Service
 
 Project generated with [Spring Initializr](https://start.spring.io/)
 
@@ -6,17 +6,17 @@ As this project was developed with Spring Boot `2.0.0.M3` for this course and no
 website, I used this HTTP call to generate the project with the settings I need:
 
 ```
-$ curl -s https://start.spring.io/starter.tgz                 \
-    -d groupId=com.in28minutes.microservices                  \
-    -d artifactId=limits-service                              \
-    -d packageName=com.in28minutes.microservices              \
-    -d name=LimitsService                                     \
-    -d 'description=Limits microservice'                      \
-    -d type=maven-project                                     \
-    -d language=java                                          \
-    -d bootVersion=2.0.0.RELEASE                              \
-    -d dependencies=web,devtools,cloud-config-client,actuator \
-    -d baseDir=limits-service                                 \
+$ curl -s https://start.spring.io/starter.tgz                  \
+    -d groupId=com.in28minutes.microservices                   \
+    -d artifactId=limits-service                               \
+    -d packageName=com.in28minutes.microservices.limitsservice \
+    -d name=LimitsService                                      \
+    -d 'description=Limits microservice'                       \
+    -d type=maven-project                                      \
+    -d language=java                                           \
+    -d bootVersion=2.0.0.RELEASE                               \
+    -d dependencies=web,devtools,cloud-config-client,actuator  \
+    -d baseDir=limits-service                                  \
     | tar -zxvf -
 ```
 
@@ -31,6 +31,20 @@ using endpoint `/limits`.
 Class [LimitsConfigurationController](src/main/java/com/in28minutes/microservices/LimitsConfigurationController.java)
 gathers configuration from [Spring Cloud Configuration Server](../spring-cloud-config-server) at http://localhost:8080,
 which is defined in the `spring.cloud.config.uri`.
+
+Added dependency `spring-cloud-starter-netflix-eureka-client` in `pom.xml`:
+
+```
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+```
+
+Added annotation `@EnableDiscoveryClient` to class [CurrencyExchangeServiceApplication.java](src/main/java/com/in28minutes/microservices/currencyexchangeservice/CurrencyExchangeServiceApplication.java) 
+
+Added configuration property `eureka.client.service-url.default-zone=localhost:8761/eureka` to file [application.properties](src/main/resources/application.properties).
+
 
 To run this project place into to this directory and run:
 
