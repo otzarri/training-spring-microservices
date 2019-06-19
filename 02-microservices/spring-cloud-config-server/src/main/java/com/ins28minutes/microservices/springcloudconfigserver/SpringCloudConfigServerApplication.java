@@ -1,4 +1,4 @@
-package com.ins28minutes.microservices;
+package com.ins28minutes.microservices.springcloudconfigserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
