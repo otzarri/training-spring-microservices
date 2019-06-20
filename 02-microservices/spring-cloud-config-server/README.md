@@ -31,6 +31,15 @@ to define the remote git repository.
 Modified main class [SpringCloudConfigServerApplication](src/main/java/com/ins28minutes/microservices/SpringCloudConfigServerApplication.java)
 to enable Spring Boot Configuration server using annotation `@EnableConfigServer`.
 
+Added following dependencies to [pom.xml](pom.xml):
+
+```
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+```
+
 To run this project place into to this directory and run:
 
 ```
