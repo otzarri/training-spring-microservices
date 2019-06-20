@@ -71,6 +71,41 @@ Added annotation `@EnableDiscoveryClient` to class [CurrencyExchangeServiceAppli
 
 Added configuration property `eureka.client.service-url.default-zone=localhost:8761/eureka` to file [application.properties](src/main/resources/application.properties).
 
+
+Added dependency `spring-cloud-starter-sleuth` in [pom.xml](pom.xml):
+
+```
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
+```
+
+Added bean `AlwaysSampler` in class [CurrencyExchangeServiceApplication](src/main/java/com/in28minutes/microservices/currencyexchangeservice/CurrencyExchangeServiceApplication.java).
+
+```
+@Bean
+public AlwaysSampler defaultSampler() {
+    return new AlwaysSampler();
+}
+```
+
+Created a logger in class [CurrencyExchangeController.java](src/main/java/com/in28minutes/microservices/currencyexchangeservice/CurrencyExchangeController.java)
+to log the exchange value of search result.
+
+Added the following dependencies to file [pom.xml](pom.xml):
+
+```
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+```
+
 To run this project place into to this directory and run:
 
 ```

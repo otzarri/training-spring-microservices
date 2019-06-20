@@ -1,4 +1,4 @@
-package com.in28minutes.microservices.netflixeurekanamingserver;
+package com.in28minutes.microservices.netflixzuulapigatewayserver;
 
 import javax.servlet.http.HttpServletRequest;
 

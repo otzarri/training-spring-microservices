@@ -9,7 +9,7 @@ website, I used this HTTP call to generate the project with the settings I need:
 curl -s https://start.spring.io/starter.tgz                                   \
     -d groupId=com.in28minutes.microservices.netflixzuulapigatewayserver      \
     -d artifactId=netflix-zuul-api-gateway-server                             \
-    -d packageName=com.in28minutes.microservices.netflixeurekanamingserver    \
+    -d packageName=com.in28minutes.microservices.netflixzuulapigatewayserver  \
     -d name=NetflixZuulApiGatewayServer                                       \
     -d 'description=Netflix Zuul API Gateway Server'                          \
     -d type=maven-project                                                     \
@@ -44,6 +44,37 @@ through Zuul, we should call
 
 Service `currency-conversion-service` is now prepared to connect
 to `currency-exchange-service` instances passing through Zuul.
+
+Added dependency `spring-cloud-starter-sleuth` in [pom.xml](pom.xml):
+
+```
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
+```
+
+Added bean `AlwaysSampler` in class [NetflixZuulApiGatewayServerApplication](src/main/java/com/in28minutes/microservices/netflixzuulapigatewayserver/NetflixZuulApiGatewayServerApplication.java).
+
+```
+@Bean
+public AlwaysSampler defaultSampler() {
+    return new AlwaysSampler();
+}
+```
+
+Added the following dependencies to file [pom.xml](pom.xml):
+
+```
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+```
 
 All requests and URIs will be logged in the console each time `currency-exchange-service` endpoint is used.
 

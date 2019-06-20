@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  rabbitmq:
+    image: rabbitmq:3
+    restart: always
+    ports:
+       - "4369:4369"
+       - "5671-5672:5671-5672"
+       - "25672:25672"
+  zipkin:
+    depends_on:
+       - rabbitmq
+    image: openzipkin/zipkin
+    restart: always
+    ports:
+       - "9410-9411:9410-9411"
+    environment:
+      RABBIT_URI: amqp://rabbitmq

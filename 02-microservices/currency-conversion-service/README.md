@@ -77,6 +77,40 @@ to connect it to Eureka Name Server.
 | /currency-converter/from/{from}/to/{to}/quantity/{quantity}       | convertCurrency()      | RestTemplate based   |
 | /currency-converter-feign/from/{from}/to/{to}/quantity/{quantity} | convertCurrencyFeign() | Feign + Ribbon based |
 
+Added dependency `spring-cloud-starter-sleuth` in [pom.xml](pom.xml):
+
+```
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
+```
+
+Added bean `AlwaysSampler` in class [CurrencyConversionServiceApplication](src/main/java/com/in28minutes/microservices/currencyconversionservice/CurrencyConversionServiceApplication.java).
+
+```
+@Bean
+public AlwaysSampler defaultSampler() {
+    return new AlwaysSampler();
+}
+```
+
+Created a logger in class [CurrencyConversionController](src/main/java/com/in28minutes/microservices/currencyconversionservice/CurrencyConversionController.java)
+to log the response of service `currency-exchange-service`.
+
+Added the following dependencies to file [pom.xml](pom.xml):
+
+```
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+```
+
 To run this project place into it's root directory and run:
 
 ```

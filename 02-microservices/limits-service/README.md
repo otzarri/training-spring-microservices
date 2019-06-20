@@ -45,6 +45,42 @@ Added annotation `@EnableDiscoveryClient` to class [CurrencyExchangeServiceAppli
 
 Added configuration property `eureka.client.service-url.default-zone=localhost:8761/eureka` to file [application.properties](src/main/resources/application.properties).
 
+Added following dependencies to [pom.xml](pom.xml):
+
+```
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+```
+
+Added the following lines to [bootstrap.properties](src/main/resources/bootstrap.properties):
+
+```
+management.security.enabled=false
+management.endpoints.web.exposure.include=*
+```
+
+To enable fault tolerance, added Hystrix in [pom.xml](pom.xml):
+
+```xml
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-sleuth-hystrix</artifactId>
+</dependency>
+```
+
+Added annotation `@EnableHystrix` to class [LimitsServiceApplication](src/main/java/com/in28minutes/microservices/limitsservice/LimitsServiceApplication.java).
+
+Implemented fault-tolerancy in class  [LimitsConfigurationController](src/main/java/com/in28minutes/microservices/limitsservice/LimitsConfigurationController.java).
 
 To run this project place into to this directory and run:
 
